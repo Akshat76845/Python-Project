@@ -6,10 +6,11 @@ class PostBase(BaseModel):
     content: str
     published: bool = True
 
+
 class PostCreate(PostBase):
     pass
 
-class Post(BaseModel):
+
+class Post(PostBase):
     title: str
-    content: str
-    published: bool
+    created_at: datetime
